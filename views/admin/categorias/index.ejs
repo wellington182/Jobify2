@@ -1,0 +1,17 @@
+<%- include( '../header.ejs' ) %>
+
+    <h2 class="l-title">Categorias: <a href="/admin/categorias/nova">Nova categoria</a> </h2>
+
+    <ul class="l-jobs">
+        
+        <% categorias.forEach( categoria => { %>
+            
+            <li class="job">
+                <%= categoria.categoria %> | <a href="/admin/categorias/delete/<%= categoria.id %>"> Excluir </a> <a href="/admin/categorias/edit/<%= categoria.id %>"> Editar </a>
+            </li>
+
+        <% } ); %>
+
+    </ul>    
+
+<%- include( '../footer.ejs' ) %>

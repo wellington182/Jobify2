@@ -1,0 +1,15 @@
+<%- include( '../header.ejs' ) %>
+
+    <h2 class="l-title">Nova categoria: <a href="/admin/categorias">Categorias</a> </h2>
+
+    <form method="post" class="vacation-form">
+
+        <label for="category">categoria:</label>
+        <input type="text" class="input" name="category" value="<%= categoria.categoria %>">
+
+        <button type="submit" class="btn">Salvar</button>
+
+    </form>
+    
+
+<%- include( '../footer.ejs' ) %>

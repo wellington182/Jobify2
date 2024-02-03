@@ -1,0 +1,27 @@
+<%- include( '../header.ejs' ) %>
+
+    <h2 class="l-title">Nova vaga: <a href="/admin/vagas">Vagas</a> </h2>
+
+    <form method="post" class="vacation-form">
+
+        <label for="title">Título:</label>
+        <input type="text" class="input" name="title">
+
+        <label for="description">Descrição:</label>
+        <textarea name="description" id="description" class="textarea"></textarea>
+
+        <label for="category">Categorias:</label>
+        <select name="category" id="category" class="select">
+            <% categorias.forEach( categoria => { %>
+                
+                <option value="<%= categoria.id %>"><%= categoria.categoria %></option>
+
+            <% } ) %>
+        </select>
+
+        <button type="submit" class="btn">Salvar</button>
+
+    </form>
+    
+
+<%- include( '../footer.ejs' ) %>

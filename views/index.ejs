@@ -1,0 +1,25 @@
+<%- include( './header.ejs' ) %>
+
+    <h2 class="l-title">Open roles:</h2>
+
+    <% categorias.forEach( categoria => { %>
+    
+        <div class="vacation-box">
+    
+            <h3 class="title"><%= categoria.categoria %></h3>
+    
+            <ul class="l-jobs">
+                <% categoria.vagas.forEach( vaga => { %> 
+
+                    <li class="job">
+                        <a href="/vaga/<%= vaga.id%>" class="link"><%= vaga.title %></a>
+                    </li>
+                
+                <% } );  %>
+            </ul>
+    
+        </div>
+    
+    <% } ); %>
+
+<%- include( './footer.ejs' ) %>

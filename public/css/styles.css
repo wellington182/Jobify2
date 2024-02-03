@@ -1,0 +1,56 @@
+html {
+    font-size: 62.5%;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    font-size: 2.4em;
+}
+
+.logo-job, .l-text, .l-footer {
+    text-align: center;
+}
+
+.l-title {
+    font-size: 1em;    
+    padding: .8em;
+    margin: 2.5em 0 1.5em 0;
+    background-color: #C4C4C4;
+    border: 1px solid #000;
+}
+
+.vacation-box > .title {
+    font-size: 1em;
+    margin-left: .5em;
+}
+
+.l-jobs {
+    list-style: none;
+    margin: 0;
+}
+
+.vacation-form > .input, .vacation-form > .select, .vacation-form > .textarea {
+    display: block;
+    width: 100%;
+    max-width: 600px;
+    margin: .3em 0 2.5em;
+    padding: 8px;
+}
+
+.vacation-form > .textarea {
+    height: 20em;
+}
+
+.vacation-form > .btn {
+    padding: 16px 38px;
+    border-radius: 5px;
+    border: none;
+    background-color: rgb(49, 147, 226);
+    color: #fff;
+    font-weight: bold;
+    cursor: pointer;
+}
