@@ -9,6 +9,8 @@ const dbConnection = sqlite.open( { filename: 'banco.sqlite', driver: sqlite3.Da
 
 const app = express();
 
+const PORT = process.env.PORT || 3000;
+
 app.set( 'view engine', 'ejs' );
 app.set( 'views',  path.join( __dirname, 'views' ) );
 
@@ -202,7 +204,7 @@ app.post( '/admin/vagas/edit/:id', async( req, res ) => {
 
 //init();
 
-app.listen( 3000, err => {
+app.listen( PORT, err => {
 
     if ( err ) {
 
@@ -211,7 +213,7 @@ app.listen( 3000, err => {
     }
     else {
 
-        console.log( 'Server running on port ', 3000 );
+        console.log( 'Server running on port ', PORT );
 
     }
 
